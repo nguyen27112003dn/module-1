@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function getDaysInMonth(month, year) {
+        if (month < 1 || month > 12) {
+            return "Tháng không hợp lệ. Vui lòng nhập từ 1 đến 12.";
+        }
+
+        let days;
+
+        if (month === 2) {
+            // Kiểm tra nếu là năm nhuận
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                days = 29; // Tháng 2 năm nhuận có 29 ngày
+            } else {
+                days = 28; // Tháng 2 bình thường có 28 ngày
+            }
+        } else if (month === 4 || month === 6 || month === 9 || month === 11) {
+            days = 30; // Các tháng 4, 6, 9, 11 có 30 ngày
+        } else {
+            days = 31; // Các tháng còn lại có 31 ngày
+        }
+
+        return days;
+    }
+
+    // Ví dụ kiểm tra
+    let month = parseInt(prompt("Nhập tháng (1-12):"));
+    let year = parseInt(prompt("Nhập năm:"));
+
+    let days = getDaysInMonth(month, year);
+    document.write("Số ngày trong tháng " + month + " năm " + year + " là: " + days);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý xe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="background-image">
+    <div class="content">
+        <table>
+            <tr>
+                <th colspan="4">Quản lý xe</th>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Loại xe" id="loaiXe"></td>
+                <td><input type="text" placeholder="Mã xe" id="maXe"></td>
+                <td><input type="text" placeholder="Tên xe" id="tenXe"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Tên chủ sở hữu" id="tenChuSoHuu"></td>
+                <td><input type="text" placeholder="Biển số" id="bienSo"></td>
+                <td><input type="text" placeholder="Màu xe" id="mauXe"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Năm đăng ký" id="namDangKy"></td>
+                <td><input type="text" placeholder="Số khung" id="soKhung"></td>
+                <td><input type="text" placeholder="Số máy" id="soMay"></td>
+            </tr>
+            <tr>
+                <!--                <td><img src="" alt="" id="img-edit" style="display: none;"></td>-->
+            </tr>
+        </table>
+        <div id="btn-save" class="center-button">
+            <button onclick="add()">Add</button>
+        </div>
+    </div>
+</div>
+<br>
+<h1>Danh Sách Quản Lý</h1>
+<table border="1" id="tableProduct"></table>
+<script src="Product.js"></script>
+<script src="xe.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
